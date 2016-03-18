@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "YYCarouselView.h"
 @interface ViewController ()
 
 @end
@@ -16,12 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor whiteColor];
+    YYCarouselView *VCCC = [[YYCarouselView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 200) withPictures:@[@"1.jpg",@"2.jpg",@"3.jpg",@"4.jpg",@"5.jpg",@"6.jpg"]];
+    [self.view addSubview:VCCC];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 @end
